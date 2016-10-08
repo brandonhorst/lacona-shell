@@ -1,2 +1,3 @@
 # lacona-shell
-Run Shell (Terminal) commands straight from Lacona
+
+Lacona Addon for running Terminal commands
