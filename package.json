@@ -5,8 +5,13 @@
   "main": "lib/index.js",
   "lacona": {
     "title": "Shell Commands",
-    "description": "Run shell (Terminal.app) commands",
-    "config": "config.json"
+    "description": "Run shell commands without opening Terminal",
+    "iconURL": "https://raw.githubusercontent.com/brandonhorst/lacona-shell/master/icon.png",
+    "examples": [
+      "run [ps -ef | grep node](shell command)",
+      "run [ps -ef | grep node](shell command) in [](directory)"
+    ],
+    "engine": ">=1.1.0"
   },
   "scripts": {
     "build": "babel src --out-dir lib",
@@ -23,16 +28,16 @@
     "url": "https://github.com/brandonhorst/lacona-timezone.git"
   },
   "dependencies": {
-    "elliptical": "^1.2.0",
+    "elliptical": "^2.0.0",
     "lacona-api": "^1.4.0",
-    "lacona-phrases": "^1.0.1",
-    "lodash": "^4.15.0"
+    "lacona-phrases": "^1.1.0",
+    "lodash": "^4.16.4"
   },
   "devDependencies": {
     "babel-plugin-transform-react-jsx": "^6.8.0",
-    "babel-cli": "^6.14.0",
+    "babel-cli": "^6.16.0",
     "babel-plugin-syntax-async-functions": "^6.13.0",
-    "babel-plugin-transform-async-to-generator": "^6.8.0",
+    "babel-plugin-transform-async-to-generator": "^6.16.0",
     "babel-preset-es2015-node": "^6.1.1",
     "rimraf": "^2.5.4"
   },

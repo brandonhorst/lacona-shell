@@ -1,7 +1,7 @@
 /** @jsx createElement */
 import _ from 'lodash'
 import { createElement } from 'elliptical'
-import { Command, String } from 'lacona-phrases'
+import { Command, String as StringPhrase, Directory } from 'lacona-phrases'
 import { exec } from 'child_process'
 import { showNotification, setClipboard } from 'lacona-api'
 
@@ -51,7 +51,9 @@ export const ExecuteCommand = {
     return (
       <sequence>
         <list items={['execute ', 'run ', 'call ']} />
-        <String label='Shell Command' consumeAll id='command' />
+        <StringPhrase label='shell command' id='command' ellipsis />
+        <literal text=' in ' />
+        <Directory id='workingDirectory' label='working directory' />
       </sequence>
     )
   }
